@@ -1,6 +1,89 @@
 @charset "UTF-8";
 @import "./reset.scss";
 
+$borderColor: rgb(85, 85, 85);
+$borderWidth: 2px;
+
 body {
   height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+
+.header {
+  .header__nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
+      background-color: $borderColor;
+      gap: 2px;
+
+      .header__tab {
+        padding: 20px 0;
+        background-color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+
+        &:nth-child(6) {
+          font-weight: bold;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .header__breadcrumbs {
+    border-top: $borderWidth solid $borderColor;
+    border-bottom: $borderWidth solid $borderColor;
+    padding: 10px 40px;
+    font-size: 12px;
+
+    .header__crumb {
+      font-weight: 600;
+
+      &:last-child { 
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background-color: $borderColor;
+  gap: $borderWidth;
+  
+  .product__img {
+    background-image: url("https://source.unsplash.com/random");
+    background-size: cover;
+    background-color: white;
+  }
+
+  .product__info {
+    background-color: $borderColor;
+    display: grid;
+    grid-template-rows: 1.3fr 1fr;
+    gap: $borderWidth;
+
+    .product__header {
+      background-color: white;
+    }
+
+    .product__footer {
+      background-color: $borderColor;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: $borderWidth;
+
+      .product__description {
+        background-color: white;
+      }
+
+      .product__faq {
+        background-color: white;
+      }
+    }
+  }
 }
