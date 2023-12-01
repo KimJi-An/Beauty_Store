@@ -69,6 +69,21 @@ body {
 
     .product__header {
       background-color: white;
+
+      .product__category {
+        
+      }
+
+      .product__title {
+
+      }
+
+      .product__add-to-cart {
+
+        .product__qty {
+
+        }
+      }
     }
 
     .product__footer {
@@ -79,10 +94,30 @@ body {
 
       .product__description {
         background-color: white;
+
+        p {
+          width: 70%;
+          margin: 0 auto;
+          padding: 25px 0;
+          line-height: 1.2;
+        }
       }
 
       .product__faq {
         background-color: white;
+        padding: 25px 0;
+        
+        .product__question {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+          margin: 0 auto;
+          padding: 7px 5px;
+          font-size: 17px;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: $borderWidth solid $borderColor;
+        }
       }
     }
   }
